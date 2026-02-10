@@ -16,6 +16,8 @@ COPY config.* /app/
 RUN flutter pub get
 RUN flutter build web --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/ --release --source-maps
 
-FROM docker.io/nginx:alpine
-RUN rm -rf /usr/share/nginx/html
+FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine
+
+COPY scripts/default.conf /etc/nginx/conf.d/default.conf
+#RUN rm -rf /usr/share/nginx/html
 COPY --from=builder /app/build/web /usr/share/nginx/html

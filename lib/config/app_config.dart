@@ -12,7 +12,7 @@ abstract class AppConfig {
   static const bool enableRegistration = true;
   static const bool hideTypingUsernames = false;
 
-  static const String inviteLinkPrefix = 'https://matrix.to/#/';
+  static const String inviteLinkPrefix = 'https://invite.community.smjg.org/#/';
   static const String deepLinkPrefix = 'im.fluffychat://chat/';
   static const String schemePrefix = 'matrix:';
   static const String pushNotificationsChannelId = 'fluffychat_push';
@@ -21,6 +21,7 @@ abstract class AppConfig {
   static const double spaceBorderRadius = 11.0;
   static const double columnWidth = 360.0;
 
+  static const String website = 'https://smjg.org';
   static const String enablePushTutorial =
       'https://fluffychat.im/faq/#push_without_google_services';
   static const String encryptionTutorial =
@@ -34,9 +35,9 @@ abstract class AppConfig {
   static const String appSsoUrlScheme = 'im.fluffychat.auth';
 
   static const String sourceCodeUrl =
-      'https://github.com/krille-chan/fluffychat';
+      'https://github.com/SMJGeV/fluffychat';
   static const String supportUrl =
-      'https://github.com/krille-chan/fluffychat/issues';
+      'mailto:community@smjg.org';
   static const String changelogUrl = 'https://fluffy.chat/en/changelog/';
 
   static const Set<String> defaultReactions = {'👍', '❤️', '😂', '😮', '😢'};
@@ -51,6 +52,17 @@ abstract class AppConfig {
     scheme: 'https',
     host: 'raw.githubusercontent.com',
     path: 'krille-chan/fluffychat/refs/heads/main/recommended_homeservers.json',
+  );
+
+  static final Uri privacyUrl = Uri(
+    scheme: 'https',
+    host: 'smjg.org',
+    path: '/datenverarbeitung-und-schutz/',
+  );
+  static final Uri imprintUrl = Uri(
+    scheme: 'https',
+    host: 'smjg.org',
+    path: '/impressum/',
   );
 
   static const String mainIsolatePortName = 'main_isolate';

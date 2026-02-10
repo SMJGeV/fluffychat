@@ -16,6 +16,8 @@
     "importNow": "Import now",
     "importEmojis": "Import Emojis",
     "importFromZipFile": "Import from .zip file",
+    "imprint": "Imprint",
+    "@imprint": {},
     "exportEmotePack": "Export Emote pack as .zip",
     "replace": "Replace",
     "about": "About",
